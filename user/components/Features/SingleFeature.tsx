@@ -1,4 +1,5 @@
 import { Feature } from "@/types/feature";
+import { Button } from "@nextui-org/react";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph } = feature;
@@ -14,6 +15,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
           {paragraph}
         </p>
+        <Button>Detail</Button>
       </div>
     </div>
   );

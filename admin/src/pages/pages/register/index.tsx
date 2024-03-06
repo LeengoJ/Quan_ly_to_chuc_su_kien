@@ -37,6 +37,9 @@ import BlankLayout from 'src/@core/layouts/BlankLayout'
 
 // ** Demo Imports
 import FooterIllustrationsV1 from 'src/views/pages/auth/FooterIllustration'
+import { callRegister } from 'src/types/apis.axios'
+import { message, notification } from 'antd'
+import { useRouter } from 'next/router'
 
 interface State {
   password: string
@@ -69,10 +72,25 @@ const RegisterPage = () => {
     password: '',
     showPassword: false
   })
-
+  const router = useRouter()
+  const [email, setEmail] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
   // ** Hook
   const theme = useTheme()
-
+  const onFinish = async () => {
+    const res = await callRegister(email, password, 'POST')
+    if (res?.data) {
+      message.success('Đăng nhập tài khoản thành công!')
+      // window.location.href = callback ? callback : '/'
+      router.push('/login')
+    } else {
+      notification.error({
+        message: 'Có lỗi xảy ra',
+        description: null, //res.message && Array.isArray(res.message) ? res.message[0] : res.message,
+        duration: 5
+      })
+    }
+  }
   const handleChange = (prop: keyof State) => (event: ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [prop]: event.target.value })
   }
@@ -167,15 +185,25 @@ const RegisterPage = () => {
             <Typography variant='body2'>Make your app management easy and fun!</Typography>
           </Box>
           <form noValidate autoComplete='off' onSubmit={e => e.preventDefault()}>
-            <TextField autoFocus fullWidth id='username' label='Username' sx={{ marginBottom: 4 }} />
-            <TextField fullWidth type='email' label='Email' sx={{ marginBottom: 4 }} />
+            <TextField
+              autoFocus
+              fullWidth
+              id='email'
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              type='email'
+              label='Email'
+              sx={{ marginBottom: 4 }}
+            />
             <FormControl fullWidth>
-              <InputLabel htmlFor='auth-register-password'>Password</InputLabel>
+              {/* <InputLabel htmlFor='auth-register-password'>Password</InputLabel> */}
               <OutlinedInput
                 label='Password'
-                value={values.password}
+                value={password}
                 id='auth-register-password'
-                onChange={handleChange('password')}
+                onChange={e => {
+                  setPassword(e.target.value)
+                }}
                 type={values.showPassword ? 'text' : 'password'}
                 endAdornment={
                   <InputAdornment position='end'>
@@ -185,12 +213,13 @@ const RegisterPage = () => {
                       onMouseDown={handleMouseDownPassword}
                       aria-label='toggle password visibility'
                     >
-                      {values.showPassword ? <EyeOutline fontSize='small' /> : <EyeOffOutline fontSize='small' />}
+                      {values.showPassword ? <EyeOutline /> : <EyeOffOutline />}
                     </IconButton>
                   </InputAdornment>
                 }
               />
             </FormControl>
+
             <FormControlLabel
               control={<Checkbox />}
               label={
@@ -204,7 +233,14 @@ const RegisterPage = () => {
                 </Fragment>
               }
             />
-            <Button fullWidth size='large' type='submit' variant='contained' sx={{ marginBottom: 7 }}>
+            <Button
+              fullWidth
+              onClick={onFinish}
+              size='large'
+              type='submit'
+              variant='contained'
+              sx={{ marginBottom: 7 }}
+            >
               Sign up
             </Button>
             <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>

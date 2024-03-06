@@ -1,6 +1,8 @@
 export interface IBackendRes<T> {
+  user(user: any): { payload: any; type: "account/setUserLoginInfo"; };
+  access_token: any;
   error?: string | string[];
-  message: string;
+  // message: string;
   statusCode: number | string;
   data?: T;
 }
