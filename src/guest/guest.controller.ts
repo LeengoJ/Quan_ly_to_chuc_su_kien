@@ -8,6 +8,7 @@ export class GuestController {
 
     @Post()
     async create(@Body() reportData: CreateGuest) {
+        console.log(new Date())
         return await this.guestService.add(reportData);
     }
 

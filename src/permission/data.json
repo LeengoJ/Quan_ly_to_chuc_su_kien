@@ -1,0 +1,371 @@
+[
+    {
+        "name": "Đăng nhập",
+        "apiPath": "/api/auth/login",
+        "method": "POST",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "Đăng ký",
+        "apiPath": "/api/auth/register",
+        "method": "Post",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "Lấy dữ liệu account",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "Đăng xuất",
+        "apiPath": "/api/auth/logout",
+        "method": "Post",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "Tạo User",
+        "apiPath": "/api/user/create",
+        "method": "Post",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "Lấy tất cả dữ liệu người dùng",
+        "apiPath": "/api/user/getAll",
+        "method": "Get",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "Lấy dữ liệu người dùng với id",
+        "apiPath": "/api/user/",
+        "method": "Get",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "Chỉnh sửa thông tin người dùng",
+        "apiPath": "api/user/update",
+        "method": "Post",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "Xoa nguoi dung",
+        "apiPath": "/api/user/:id",
+        "method": "Delete",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "/api/role/create",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "/api/role",
+        "method": "GET",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "/api/role/",
+        "method": "Get",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    },
+    {
+        "name": "",
+        "apiPath": "",
+        "method": "",
+        "module": "",
+        "createBy": "656814812eed6b7037f88cfb",
+        "createAt": "1703231939522",
+        "isDelete": false
+    }
+]

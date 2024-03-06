@@ -18,17 +18,45 @@ import { ReportModule } from './report/report.module';
 import { CustomerRequestModule } from './customer-request/customer-request.module';
 import { PermissionModule } from './permission/permission.module';
 import { RoleModule } from './role/role.module';
-import { ModuleNameModule } from './module_name/module_name.module';
+import { PassportModule } from '@nestjs/passport';
+import { AuthService } from './auth/auth.service';
+import { UserModule } from './user/user.module';
+import { JwtModule } from '@nestjs/jwt';
+import { LocalStrategy } from './auth/passport/local.strategy';
+
+// import { ModuleNameModule } from './module_name/module_name.module';
 
 
 
 @Module({
   imports: [
+
     ConfigModule.forRoot({
       isGlobal: true,
-    }), MongooseModule.forRoot('mongodb://127.0.0.1:27017/Event'), AuthModule, IpBlockModule, EventModule, OganizationModule, PlanerModule, LocationModule, PhongHoiNghiModule, LichModule, PhongNguModule, TypeEventModule, TicketModule, GuestModule, TypeGuestModule, ReportModule, CustomerRequestModule, PermissionModule, RoleModule, ModuleNameModule//,, TaskModule, CalendarModule,
+    }), MongooseModule.forRoot('mongodb://127.0.0.1:27017/Event'),
+    AuthModule,
+    PassportModule,
+    IpBlockModule,
+    EventModule,
+    OganizationModule,
+    PlanerModule,
+    LocationModule,
+    PhongHoiNghiModule,
+    LichModule,
+    PhongNguModule,
+    TypeEventModule,
+    TicketModule,
+    GuestModule,
+    TypeGuestModule,
+    ReportModule,
+    CustomerRequestModule,
+    PermissionModule,
+    RoleModule,
+    UserModule,
+    JwtModule,
+    PassportModule//ModuleNameModule, //,, TaskModule, CalendarModule,
   ],
-  providers: [],
+  providers: [AuthService, LocalStrategy],
   controllers: [],
   //LichService, 
   //}), MongooseModule.forRoot('mongodb + srv://lexuanngo13:13052002Ngo@cluster0.et3euxq.mongodb.net/?retryWrites=true&w=majority')],

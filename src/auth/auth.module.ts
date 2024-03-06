@@ -6,11 +6,11 @@ import { UserModule } from 'src/user/user.module';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 
-import { JwtStrategy } from 'src/common/guards/jwt.strategy';
-import { IpBlockService } from 'src/ip-block/ip-block.service';
-import { ipBlockSchema } from 'src/ip-block/ip-block.schema';
-import { MongooseModule } from '@nestjs/mongoose';
+import { JwtStrategy } from 'src/auth/passport/jwt.strategy';
 import { IpBlockModule } from 'src/ip-block/ip-block.module';
+import { RoleModule } from 'src/role/role.module';
+import { PassportModule } from '@nestjs/passport';
+import { LocalStrategy } from './passport/local.strategy';
 
 @Module({
     imports: [
@@ -20,7 +20,9 @@ import { IpBlockModule } from 'src/ip-block/ip-block.module';
                 secret: 'secret',
                 signOptions: { expiresIn: '3600s' },
             }),
-        }), IpBlockModule
+        }), IpBlockModule,
+        RoleModule,
+        PassportModule
         // This code is using the JwtModule from the`@nestjs/jwt` 
         //package to enable JSON Web Token(JWT) authentication 
         //in a NestJS application.The`JwtModule.registerAsync()` 
@@ -33,7 +35,7 @@ import { IpBlockModule } from 'src/ip-block/ip-block.module';
 
     ],
     controllers: [AuthController],
-    providers: [AuthService, JwtStrategy],
-
+    providers: [AuthService, JwtStrategy, LocalStrategy],
+    exports: [AuthService],
 })
 export class AuthModule { }

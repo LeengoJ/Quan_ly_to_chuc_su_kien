@@ -9,13 +9,13 @@ export type UserDocument = User & Document;
 export class User {
     @Prop({ required: true, })
     password!: string;
-    @Prop({ required: true, unique: true })
+    @Prop({ required: true })
     email!: string;
     @Prop({ required: true })
     name!: string;
     @Prop({ required: false, length: 10 })
     phoneNumber!: string;
-    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: Role.name })
+    @Prop({ default: "656afb7046d3d144194feecb", type: mongoose.Schema.Types.ObjectId, ref: Role.name })
     role!: mongoose.Schema.Types.ObjectId
     @Prop()
     refreshToken!: string;

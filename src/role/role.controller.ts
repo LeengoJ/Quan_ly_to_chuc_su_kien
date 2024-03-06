@@ -6,9 +6,9 @@ import { CreateRole } from 'src/common/dtos/role-dto/role-dto';
 export class RoleController {
     constructor(private readonly roleService: RoleService) { }
 
-    @Post()
-    async create(@Body() reportData: CreateRole) {
-        return await this.roleService.add(reportData);
+    @Post('/create')
+    async create(@Body() data: CreateRole) {
+        return await this.roleService.add(data);
     }
 
     @Get()
@@ -27,7 +27,7 @@ export class RoleController {
     }
 
     @Put(':id')
-    async update(@Param('id') id: string, @Body() reportData: Partial<CreateRole>) {
-        return await this.roleService.update(id, reportData);
+    async update(@Param('id') id: string, @Body() data: Partial<CreateRole>) {
+        return await this.roleService.update(id, data);
     }
 }

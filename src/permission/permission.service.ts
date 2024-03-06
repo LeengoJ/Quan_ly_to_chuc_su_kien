@@ -6,7 +6,7 @@ import { CreatePermission } from 'src/common/dtos/permission-dto/permisson-dto';
 
 @Injectable()
 export class PermissionService {
-    constructor(@InjectModel('Report') private readonly PermissionModel: Model<PermissionDocument>) { }
+    constructor(@InjectModel('Permission') private readonly PermissionModel: Model<PermissionDocument>) { }
 
     async add(planer: CreatePermission) {
         const newO = new this.PermissionModel(planer)

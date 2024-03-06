@@ -5,7 +5,7 @@ import {
 import { Reflector } from '@nestjs/core';
 import { AuthGuard } from '@nestjs/passport';
 import { Request } from 'express';
-import { IS_PUBLIC_KEY, IS_PUBLIC_PERMISSION } from 'src/decorator/customize';
+import { IS_PUBLIC_KEY, IS_PUBLIC_PERMISSION } from 'src/common/decorator/customize';
 
 @Injectable()
 export class JwtAuthGuard extends AuthGuard('jwt') {
@@ -30,20 +30,31 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
             context.getClass(),
         ]);
         const request: Request = context.switchToHttp().getRequest()
-        // You can throw an exception based on either "info" or "err" arguments
-        if (err || !user) {
-            throw err || new UnauthorizedException("Token không hợp lệ");
-        }
-        //check permission 
         const targetMethod = request.method
         const targetEndpoint = request.route?.path as string
+        if (targetEndpoint.startsWith("/api/v1/")) {
+            return
+        }
+        if (targetEndpoint.startsWith("/api/v1/learner")) {
+            return
+        }
+        if (targetEndpoint.startsWith("/api/v1/vocabulary")) {
+            return
+        }
+        // You can throw an exception based on either "info" or "err" arguments
+        if (err || !user) {
+            throw err || new UnauthorizedException("Token không hợp lệ" + err + user);
+        }
+        //check permission 
+        console.log()
+
         const permissions = user?.permissions ?? []
         let isExist = permissions.find((permissions: { method: string; apiPath: string; }) =>
             targetMethod === permissions.method
             &&
             targetEndpoint === permissions.apiPath
         )
-        if (targetEndpoint.startsWith("/api/v1/auth")) {
+        if (targetEndpoint.startsWith("/api/v1/role/create")) {
             isExist = true
         }
         if (targetEndpoint.startsWith("/api/v1/learner")) {

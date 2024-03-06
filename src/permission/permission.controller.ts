@@ -6,8 +6,9 @@ import { CreatePermission } from 'src/common/dtos/permission-dto/permisson-dto';
 export class PermissionController {
     constructor(private readonly permissionService: PermissionService) { }
 
-    @Post()
+    @Post('createPermission')
     async create(@Body() perData: CreatePermission) {
+
         return await this.permissionService.add(perData);
     }
 

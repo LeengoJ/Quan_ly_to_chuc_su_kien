@@ -20,6 +20,7 @@ export class LocationController {
     updateLocation(@Param("id") id: string, @Body() updateLocation: updateLocationDto) {
         this.locationService.updateInfoLocation(id, updateLocation)
     }
+    //tìm kiếm địa điểm tổ chức sự kiện 
     @Put('review-location')
     reviewLocation(@Body() rev: reviewLocationDto) {
         this.locationService.reviewLocation(rev)
@@ -28,6 +29,5 @@ export class LocationController {
     getAll() {
         return this.locationService.getAll()
     }
-
 
 }

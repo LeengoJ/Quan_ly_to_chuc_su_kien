@@ -23,9 +23,14 @@ export class RoleService {
     //Xóa
     async delete(id: string) {
         return await this.roleModel.findByIdAndDelete(id)
+
     }
     // Cập nhật
     async update(id: string, data: Partial<CreateRole>) {
         return await this.roleModel.findByIdAndUpdate(id, data, { new: true })
+    }
+    // Lấy role bằng tên role
+    async getbyName(name: string): Promise<RoleDocument | null> {
+        return await this.roleModel.findOne({ name })
     }
 }
