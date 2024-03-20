@@ -1,0 +1,1 @@
+{"version":3,"file":"ip-block.schema.js","sourceRoot":"","sources":["../../src/ip-block/ip-block.schema.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,+CAA+D;AAMxD,IAAM,OAAO,GAAb,MAAM,OAAO;CAGnB,CAAA;AAHY,0BAAO;AAEhB;IADC,IAAA,eAAI,EAAC,EAAE,QAAQ,EAAE,IAAI,EAAE,CAAC;;mCACd;kBAFF,OAAO;IADnB,IAAA,iBAAM,GAAE;GACI,OAAO,CAGnB;AACY,QAAA,aAAa,GAAG,wBAAa,CAAC,cAAc,CAAC,OAAO,CAChE,CAAC"}

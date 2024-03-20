@@ -1,0 +1,10 @@
+export declare const ADMIN_ROLE = "SUPER_ADMIN";
+export declare const USER_ROLE = "NORMAL_USER";
+export declare const PORT = 8000;
+export declare const MONGODB_URI = "";
+export declare const JWT_SECRET = "SecretKey";
+export declare const SECRET_KEY = "";
+export declare const JWT_EXPIRED = "1days";
+export declare const JWT_REFRESH_TOKEN_SECRET = "SecretKey";
+export declare const JWT_REFRESH_TOKEN_EXPIRED = "1days";
+export declare const INIT = true;
